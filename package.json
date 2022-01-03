@@ -1,0 +1,64 @@
+{
+  "name": "wavook-Wallet",
+  "productName": "wavook Wallet",
+  "version": "1.2.0-Beta",
+  "private": true,
+  "description": "wavook's wallet allow you to control your budget and plan your finance",
+  "author": {
+    "name": "Alejandro Loaiza"
+  },
+  "repository": "https://github.com/zer0kool/wavook-wallet",
+  "license": "MIT",
+  "main": "app.js",
+  "scripts": {
+    "start": "electron app.js",
+    "test": "echo \"ERROR : no test plugin set\"",
+    "dist": "electron-builder",
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --icon=\"icons/mac/app_r.icns\" --prune=true --out=../release-builds",
+    "package-win": "electron-packager . --overwrite --asar=false --platform=win32 --arch=x64 --icon=\"./icons/win/app_r.ico\" --prune=true --out=../release-builds --version-string.CompanyName=Wavook.com --version-string.FileDescription=Wavook.com --version-string.ProductName=\"Wavook\"",
+    "package-lin": "electron-packager . --overwrite --platform=linux --arch=x64 --icon=\"icons/png/Round/512x512.png\" --prune=true --out=../release-builds"
+  },
+  "keywords": [
+    "budget",
+    "chart"
+  ],
+  "build": {
+    "appId": "Wavook-Wallet",
+    "productName": "Wavook-Wallet",
+    "mac": {
+      "category": "public.app-category.finance",
+      "icon": "./icons/mac/app_r.icns",
+      "asar": false
+    },
+    "dmg": {
+      "icon": "./build/mountedimage2.icns"
+    },
+    "win": {
+      "icon": "./icons/win/app_r.ico",
+      "target": "nsis",
+      "asar": false
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "license": "./LICENSE"
+    }
+  },
+  "dependencies": {
+    "bulma": "^0.4.3",
+    "bulma-extensions": "^1.0.3",
+    "chart.js": "^2.6.0",
+    "chartjs-plugin-datalabels": "^0.3.0",
+    "fontawesome": "^4.7.2",
+    "jquery": "^3.2.1",
+    "jsonfile": "^3.0.1",
+    "moment": "^2.19.1",
+    "sql.js": "^0.4.0",
+    "typeahead.js": "^0.11.1"
+  },
+  "devDependencies": {
+    "electron": "^1.8.1",
+    "electron-builder": "^19.49.0",
+    "electron-packager": "^8.1.0"
+  }
+}
