@@ -11,7 +11,7 @@
   <p align="center">
     wavook's wallet allow you to control your budget and plan your finances. 
     <br />
-    <a href=""><strong>Download wavook wallet »</strong></a>
+    <a href="https://github.com/zer0kool/wavook-wallet/releases/tag/app"><strong>Download wavook wallet »</strong></a>
     <br />
     <br />
   </p>
